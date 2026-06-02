@@ -59,6 +59,26 @@ In another terminal:
 ```bash
 python mcp_server.py
 ```
+## Install and Configure Continue in VSCODE
+Continue can be configured to use Ollama with:
+```ymal
+name: Local Config
+version: 1.0.0
+schema: v1
+
+models:
+  - name: Qwen3
+    provider: ollama
+    model: qwen3
+```
+That tells Continue:
+```text
+Use local Ollama at localhost:11434
+```
+ Continue will act as MCP Client that talks to mcp_server.py
+
+mcp_server.py calls:
+server.py at http://127.0.0.1:8000/search
 
 ## Tools
 
