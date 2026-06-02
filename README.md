@@ -1,6 +1,7 @@
-# Lean Local Coding Assistant
+# Local Coding Assistant
 
 MCP tools for VS Code-compatible clients
+![Agent Screenshot](media/screenshot.png)
 
 ## Architecture
 
@@ -79,12 +80,10 @@ Run drush cr.
 Run composer validate.
 ```
 
-## Important difference from RAG
+# License
 
-This assistant does not search a vector database. It only knows:
+MIT License
 
-1. what the user asks,
-2. files explicitly read or passed as `context_files`,
-3. command output returned by tools.
+Copyright (c) 2026 John Paul Mariano
 
-That keeps it lean and predictable.
+See the LICENSE file for full license text.
