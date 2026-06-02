@@ -25,10 +25,10 @@ OLLAMA_BASE_URL=http://127.0.0.1:11434
 OLLAMA_MODEL=qwen3
 ```
 
-`PROJECT_ROOT` replaces `DRUPAL_ROOT`, but the config still falls back to `DRUPAL_ROOT` if you already use that variable.
+`PROJECT_ROOT` is the root of your programming project.
 
 ## Install
-
+- Make Sure your terminal is running in Conda Environment
 ```bash
 pip install -r requirements.txt
 ```
@@ -41,7 +41,7 @@ ollama pull qwen3
 ```
 
 ## Start the API server
-
+- Make Sure your terminal is running in Conda Environment
 ```bash
 uvicorn server:app --reload --port 8000
 ```
@@ -53,7 +53,7 @@ http://127.0.0.1:8000/docs
 ```
 
 ## Start the MCP server
-
+- Make Sure your terminal is running in Conda Environment
 In another terminal:
 
 ```bash
@@ -75,7 +75,7 @@ That tells Continue:
 ```text
 Use local Ollama at localhost:11434
 ```
- Continue will act as MCP Client that talks to mcp_server.py
+Continue will act as MCP Client that talks to mcp_server.py
 
 mcp_server.py calls:
 server.py at http://127.0.0.1:8000/search
